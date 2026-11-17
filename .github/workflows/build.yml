@@ -17,6 +17,9 @@ jobs:
         distribution: 'temurin'
         java-version: '17'
 
+    - name: Setup Android SDK
+      uses: android-actions/setup-android@v3
+
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
 
@@ -27,4 +30,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: Abu-Hassoun-Cinema-APK
-        path: "**/build/outputs/apk/release/app-release.apk"
+        path: app/build/outputs/apk/release/app-release.apk
